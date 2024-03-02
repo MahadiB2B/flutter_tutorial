@@ -18,6 +18,11 @@ class MyApp extends StatelessWidget {
 class HomeActivity extends StatelessWidget{
   const HomeActivity({super.key});
 
+MySnackBar(message,context){
+  return ScaffoldMessenger.of(context).showSnackBar(SnackBar
+    (content:Text(message)));
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +33,9 @@ class HomeActivity extends StatelessWidget{
         toolbarHeight:70,
         titleSpacing: 35,
         actions: [
-          IconButton(onPressed: (){}, icon:Icon(Icons.add_a_photo)),
-          IconButton(onPressed: (){}, icon:Icon(Icons.search)),
-          IconButton(onPressed: (){}, icon:Icon(Icons.more_vert))
+          IconButton(onPressed: (){MySnackBar("This is Camera ", context);}, icon:Icon(Icons.add_a_photo)),
+          IconButton(onPressed: (){MySnackBar("This is Searce Bar", context);}, icon:Icon(Icons.search)),
+          IconButton(onPressed: (){MySnackBar("This is More Button", context);}, icon:Icon(Icons.more_vert))
         ],
       ),
 
