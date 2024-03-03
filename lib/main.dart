@@ -38,7 +38,10 @@ MySnackBar(message,context){
           IconButton(onPressed: (){MySnackBar("This is More Button", context);}, icon:Icon(Icons.more_vert))
         ],
       ),
-
+floatingActionButton: FloatingActionButton(onPressed: (){},child:Icon(Icons.add),
+  backgroundColor:(Colors.blue),
+  elevation: 10,
+),
     );
   }
 
