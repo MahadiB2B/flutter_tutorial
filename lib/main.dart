@@ -28,7 +28,7 @@ MySnackBar(message,context){
     return Scaffold(
       appBar: AppBar(title: Text("Mahadi App"),
 
-      backgroundColor:Colors.blue,
+      backgroundColor:Colors.teal,
         elevation: 2,
         toolbarHeight:70,
         titleSpacing: 35,
@@ -38,10 +38,30 @@ MySnackBar(message,context){
           IconButton(onPressed: (){MySnackBar("This is More Button", context);}, icon:Icon(Icons.more_vert))
         ],
       ),
-floatingActionButton: FloatingActionButton(onPressed: (){},child:Icon(Icons.add),
-  backgroundColor:(Colors.blue),
+floatingActionButton: FloatingActionButton(onPressed: (){},child:Icon(Icons.add,color: Colors.white,),
+  backgroundColor:(Colors.black54),
   elevation: 10,
 ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 2,
+          items: [
+             BottomNavigationBarItem(icon: Icon(Icons.add_call,color: Colors.black,), label: "Call Now",backgroundColor: Colors.teal),
+            BottomNavigationBarItem(icon: Icon(Icons.add_alert_rounded,color: Colors.black,), label: "Notification",backgroundColor: Colors.teal),
+            BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.black,), label: "Home",backgroundColor: Colors.teal),
+            BottomNavigationBarItem(icon: Icon(Icons.comment_outlined,color: Colors.black,), label: "Messege",backgroundColor: Colors.teal),
+            BottomNavigationBarItem(icon: Icon(Icons.delete_sharp,color: Colors.black,), label: "Bin",backgroundColor: Colors.blue,),
+      ],
+        onTap: (int index){
+          if (index==0){}
+          if (index==1){}
+          if (index==2){}
+          if (index==3){}
+          if (index==4){}
+        },
+      ) ,
+
+
     );
   }
 
