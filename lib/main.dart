@@ -61,6 +61,42 @@ floatingActionButton: FloatingActionButton(onPressed: (){},child:Icon(Icons.add,
         },
       ) ,
 
+      drawer: Drawer(
+        child: ListView(
+          children:[
+          DrawerHeader(
+            padding: EdgeInsets.all(0),
+
+             child: UserAccountsDrawerHeader(
+               decoration: BoxDecoration(color: Colors.black),
+                 accountName: Text("Mahadi Hasan"),
+          accountEmail:Text("mahadib2b@gmail.com"),
+               currentAccountPicture: Image.network("https://avatars.githubusercontent.com/u/153096844?…00&u=d9c6f32ad4ec53bf7449faccdec60ac21f2bbc14&v=4"),
+               currentAccountPictureSize: const Size.square(60.0),
+             ),
+             ),
+            ListTile(
+              leading:Icon(Icons.add_alert_rounded),
+              title: Text("Notification"),
+              onTap: (){},
+            ),
+            ListTile(
+              leading:Icon(Icons.add_call),
+              title:Text("Call Now"),
+              onTap:(){},
+            ),
+            ListTile(
+              leading:Icon(Icons.add_a_photo),
+            title:Text("Camera"),
+              onTap:(){},
+            ),
+
+
+          ],
+
+        ),
+      ),
+
 
     );
   }
