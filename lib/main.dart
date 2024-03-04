@@ -117,14 +117,14 @@ floatingActionButton: FloatingActionButton(onPressed: (){},
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(height: 250,width: 250,
-            child:  ElevatedButton(onPressed: (){},child: const Text("Alert"),),
+            child:  ElevatedButton(onPressed: (){MyAlertDialog(context);},child: const Text("Alert",),),
           alignment: Alignment.center,
 padding:const EdgeInsets.all(40),
             margin:const EdgeInsets.all(70),
             decoration:
             BoxDecoration(
-                color: Colors.amberAccent,
-                border: Border.all(color:Colors.cyan,width: 6,),
+                color: Colors.black54,
+                border: Border.all(color:Colors.teal,width: 6,),
             borderRadius: const BorderRadius.all(Radius.circular(250),),
             ),
           ),
